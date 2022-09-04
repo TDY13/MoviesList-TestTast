@@ -74,7 +74,7 @@ class MoviesLisViewController: UIViewController {
                     navigationController?.present(alert, animated: true, completion: nil)
                 } else {
                     moviesData.insert(model, at: 0)
-                    mainView.tableView.reloadData()
+                    mainView.tableView.reloadSections([0], with: .none)
                     mainView.moviesTitleTextField.text = ""
                     mainView.moviesYearTextField.text = ""
                     mainView.moviesTitleTextField.resignFirstResponder()
